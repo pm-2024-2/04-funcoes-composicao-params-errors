@@ -19,11 +19,22 @@ console.log('  tads   ')
 
 // trim // aparar
 
+function leftTrim(str) { // '   bla bla bla'
+    var r = ''
+    var copia = false // flag
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] != ' ') copia = true
+
+        if (copia) r += str[i]
+    }
+    return r
+}
+
 var s1 = '  tads  '
 console.log(s1)
 var s2 = leftTrim(s1)
 console.log(s2) // 'tads  '
-var s3 = rightTrim(s1)
-console.log(s3) // '  tads'
-var s4 = allTrim(s1)
-console.log(s4) // 'tads'
+// var s3 = rightTrim(s1)
+// console.log(s3) // '  tads'
+// var s4 = allTrim(s1)
+// console.log(s4) // 'tads'
